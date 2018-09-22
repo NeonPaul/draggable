@@ -27,21 +27,10 @@
     "es6"
   ],
   "main": "./lib/draggable.bundle.js",
-  "scripts": {
-    "start": "concurrently \"yarn watch\" \"cd examples && yarn && yarn start\"",
-    "build": "yarn build:production",
-    "watch": "node scripts/watch.js",
-    "prepare": "yarn build:development",
-    "prepublishOnly": "yarn build:production",
-    "lint": "eslint ./src --max-warnings 0",
-    "esdoc": "esdoc -c esdoc.json",
-    "test": "jest --config config.json",
-    "test-ci": "jest --config config.json --coverage && codecov",
-    "build:development": "node scripts/build.js",
-    "build:production": "node scripts/build.js --production"
-  },
+  "module": "./src/index.js",
   "files": [
-    "lib/**/*.js"
+    "lib/**/*.js",
+    "src/**/*.js"
   ],
   "devDependencies": {
     "babel-core": "^6.26.3",
